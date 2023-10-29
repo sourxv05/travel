@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+
+</head>
+<body style="background-image:url('pxfuel.jpg');">
+<form action="" method="POST">
+    {% csrf_token %}
+    <label><b><u>REGISTRATION</u></b></label><br>
+
+<table>
+    <tr>
+    <td><label>USER NAME</label></td>
+   <td><input type="text" name="username" placeholder=""></td>
+    </tr>
+      <tr>
+    <td><label>FIRST NAME</label></td>
+   <td><input type="text" name="first_name" placeholder=""></td>
+    </tr>
+      <tr>
+    <td><label>LAST NAME</label></td>
+   <td><input type="text" name="last_name" placeholder=" "></td>
+    </tr>
+      <tr>
+    <td><label>E MAIL</label></td>
+   <td><input type="email" name="email" placeholder=""></td>
+    </tr>
+
+      <tr>
+    <td><label>PASSWORD</label></td>
+   <td><input type="password" name="password" placeholder=""></td>
+    </tr>
+    <tr>
+   <td><label>CONFIRM PASSWORD</label></td>
+    <td><input type="text" name="cpassword" ></td>
+    </tr>
+</table>
+    <input type="submit" name="button1" value="login">
+
+
+</form>
+{% for msg in messages %}
+<h1>{{msg}}</h1>
+{% endfor %}
+</body>
+</html>
